@@ -26,7 +26,7 @@ client.on("message", message => {
     let authorMention = "<@" + author.id.toString() + ">";
 
     if (isCmd("ping"))
-        send("Pong!");
+        send("Bong!");
 
     else if (isCmd("whoami"))
         send(`You are ${authorMention}! `);
