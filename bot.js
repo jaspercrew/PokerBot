@@ -19,6 +19,9 @@ client.on("message", message => {
     else if (message.content === "!test") {
         send("Test successful. :D");
     }
+    else if (message.content === "!toxic") {
+        send("Are you talking about <@363180361188114434>?");
+    }
 });
 
 client.login(process.env.BOT_TOKEN).then();
