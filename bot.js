@@ -6,8 +6,8 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
-    function send(msg) {
-        message.reply(msg).then();
+    function send(msgText) {
+        message.client.channels.get(message.channel.id).send(msgText);
     }
 
     if (message.content === "ping") {
