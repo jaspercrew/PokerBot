@@ -15,7 +15,7 @@ client.on("message", message => {
         send("Pong!");
     }
     else if (message.content === "whoami") {
-        send("You are <@" + message.author.id.toString() + ">!")
+        send("You are <@" + message.author.id.toString() + ">!");
     }
 });
 
