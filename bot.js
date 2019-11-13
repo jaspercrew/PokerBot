@@ -7,8 +7,15 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
+    function send(msg) {
+        message.reply(msg).then();
+    }
+
     if (message.content === "ping") {
-        message.reply("pong").then();
+        send("Pong!");
+    }
+    else if (message.content === "whoami") {
+        send("You are <@" + message.author.id.toString() + ">!")
     }
 });
 
