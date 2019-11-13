@@ -7,14 +7,17 @@ client.on("ready", () => {
 
 client.on("message", message => {
     function send(msgText) {
-        message.client.channels.get(message.channel.id).send(msgText);
+        client.channels.get(message.channel.id).send(msgText);
     }
 
-    if (message.content === "ping") {
+    if (message.content === "!ping") {
         send("Pong!");
     }
-    else if (message.content === "whoami") {
+    else if (message.content === "!whoami") {
         send("You are <@" + message.author.id.toString() + ">!");
+    }
+    else if (message.content === "!test") {
+        send("Test successful. :D");
     }
 });
 
